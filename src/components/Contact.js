@@ -1,9 +1,9 @@
 // Terima props lalu tampilkan dalam Contact component
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 import React from "react";
-import "../style/contact.css";
+import "./contact.css";
 
-const Contact = ({ contacts }) => {
+const Contact = ({ data }) => {
   return (
     // <div className="container__card">
     //   {contacts.map((contact) => (
@@ -18,13 +18,13 @@ const Contact = ({ contacts }) => {
     //   ))}
 
     <div className="container__card">
-      <div className="card" key={contacts.id}>
-        <img src={contacts.photo} alt={contacts.name} />
-        <div className="card__details">
-          <h2>{contacts.name}</h2>
-          <p>{contacts.phone}</p>
-          <p>{contacts.email}</p>
-        </div>
+      <div className="card">
+        <img src={data.photo} alt={data.name}></img>
+        <section className="card__details">
+          <h3>{data.name}</h3>
+          <p>{data.phone}</p>
+          <p>{data.email}</p>
+        </section>
       </div>
     </div>
   );
