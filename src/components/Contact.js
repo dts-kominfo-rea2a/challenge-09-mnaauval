@@ -3,7 +3,7 @@
 import React from "react";
 import "./contact.css";
 
-const Contact = ({ contacts }) => {
+const Contact = ({ data }) => {
   return (
     // <div className="container__card">
     //   {contacts.map((contact) => (
@@ -19,11 +19,11 @@ const Contact = ({ contacts }) => {
     // </div>
     <div className="container__card">
       <div className="card">
-        <img src={contacts.photo} alt={contacts.name}></img>
+        <img src={data.photo} alt={data.name}></img>
         <section className="card__details">
-          <h3>{contacts.name}</h3>
-          <p>{contacts.phone}</p>
-          <p>{contacts.email}</p>
+          <h3>{data.name}</h3>
+          <p>{data.phone}</p>
+          <p>{data.email}</p>
         </section>
       </div>
     </div>
